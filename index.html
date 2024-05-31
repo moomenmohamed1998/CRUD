@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <title>CRUD</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="d-flex justify-content-center">
+        <div class="head d-flex justify-content-center">
+          <h1 class="p-4">Bookmarker</h1>
+        </div>
+        <div class="backgroung"></div>
+      </div>
+
+      <div class="text-center"><h2 class="p-4"><i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites <i class="fa-solid fa-bookmark"></i></h2></div>
+      <div class="form">
+        <div>
+          <h5 class="iconsbook"><i class="fa-solid fa-book"></i> Site Name</h5>
+        </div>
+        <div class="form-floating mb-3">
+          <input
+            oninput="validationName()"
+            type="text"
+            class="form-control"
+            id="bookmark_Name"
+            placeholder=" "
+          />
+          <label for="floatingInput">bookmark Name</label>
+        </div>
+        <div>
+          <h5><i class="fa-solid fa-link"></i> Site URL</h5>
+        </div>
+        <div class="form-floating mb-3">
+          <input
+            type="email"
+            class="form-control"
+            id="Website_URL"
+            placeholder=" "
+          />
+          <label for="floatingInput">Website URL</label>
+        </div>
+        <div class="text-center p-5">
+          <button onclick="add()" type="button" class="btn btn-danger btn">
+            Supmit
+          </button>
+        </div>
+      </div>
+    </div>
+    <div>
+      <table class="container table text-center">
+        <thead>
+          <tr>
+            <th>Index</th>
+            <th>Website Name</th>
+            <th>Visit</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody id="tdata"></tbody>
+      </table>
+    </div>
+
+    <script src="js/index.js"></script>
+  </body>
+</html>
